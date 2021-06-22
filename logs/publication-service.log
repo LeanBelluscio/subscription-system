@@ -1,0 +1,7 @@
+2021-06-22 01:45:21,606 INFO com.adidas.publication.PublicationApplication [main] Starting PublicationApplication using Java 11.0.10 on DESKTOP-BF1CHRE with PID 2576 (C:\_code\Sandbox\Adidas\publication-service\target\classes started by Leandro in C:\_code\Sandbox\Adidas)
+2021-06-22 01:45:21,613 DEBUG com.adidas.publication.PublicationApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-22 01:45:21,614 INFO com.adidas.publication.PublicationApplication [main] The following profiles are active: dev
+2021-06-22 01:45:22,996 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2021-06-22 01:45:23,111 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1451 ms
+2021-06-22 01:45:23,780 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2021-06-22 01:45:23,936 INFO com.adidas.publication.PublicationApplication [main] Started PublicationApplication in 2.732 seconds (JVM running for 3.257)

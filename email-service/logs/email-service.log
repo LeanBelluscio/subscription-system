@@ -1,0 +1,4 @@
+2021-06-22 02:24:46,022 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.11 on DESKTOP-BF1CHRE with PID 27288 (C:\_code\Sandbox\Adidas\email-service\target\classes started by Leandro in C:\_code\Sandbox\Adidas\email-service)
+2021-06-22 02:24:46,024 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-22 02:24:46,024 INFO com.adidas.email.EmailApplication [main] The following profiles are active: dev
+2021-06-22 02:24:47,973 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 2.306 seconds (JVM running for 2.77)

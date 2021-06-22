@@ -1,0 +1,38 @@
+2021-06-21 21:05:19,035 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [CONSOLE]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:374)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.adidas.subscription.SubscriptionApplication.main(SubscriptionApplication.java:24)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [CONSOLE]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 18 common frames omitted
+2021-06-21 23:06:44,263 INFO com.adidas.subscription.SubscriptionApplication [main] Starting SubscriptionApplication using Java 11.0.11 on DESKTOP-BF1CHRE with PID 30100 (C:\_code\Sandbox\Adidas\subscription-service\target\classes started by Leandro in C:\_code\Sandbox\Adidas\subscription-service)
+2021-06-21 23:06:44,266 DEBUG com.adidas.subscription.SubscriptionApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-21 23:06:44,267 INFO com.adidas.subscription.SubscriptionApplication [main] The following profiles are active: dev
+2021-06-21 23:06:47,555 INFO com.adidas.subscription.SubscriptionApplication [main] Started SubscriptionApplication in 3.661 seconds (JVM running for 4.134)
+2021-06-21 23:06:56,726 INFO com.adidas.subscription.controller.SubscriptionController [http-nio-8080-exec-1] Creating new subscription

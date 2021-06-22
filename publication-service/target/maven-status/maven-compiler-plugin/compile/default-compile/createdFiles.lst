@@ -1,0 +1,15 @@
+com\adidas\publication\util\DateConverter$Deserialize.class
+com\adidas\publication\dto\Request.class
+com\adidas\publication\util\JsonUtil.class
+com\adidas\publication\SwaggerConfig.class
+com\adidas\publication\service\SubscriptionServiceConsumer.class
+com\adidas\publication\service\impl\ResApiComsumer.class
+com\adidas\publication\errorhandling\ObjectNotFoundException.class
+com\adidas\publication\util\DateConverter.class
+com\adidas\publication\errorhandling\CustomEntityExceptionHandler.class
+com\adidas\publication\dto\SubscriptionRequest.class
+com\adidas\publication\controller\PublicationController.class
+com\adidas\publication\service\impl\SubscriptionServiceConsumerImpl.class
+com\adidas\publication\errorhandling\SubscriptionServiceErrorException.class
+com\adidas\publication\PublicationApplication.class
+com\adidas\publication\errorhandling\ErrorDetails.class

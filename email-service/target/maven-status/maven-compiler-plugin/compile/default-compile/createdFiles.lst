@@ -1,0 +1,11 @@
+com\adidas\email\EmailApplication.class
+com\adidas\email\util\DateConverter.class
+com\adidas\email\controller\EmailController.class
+com\adidas\email\util\EmailSender.class
+com\adidas\email\dto\SubscriptionRequest.class
+com\adidas\email\errorhandling\CustomEntityExceptionHandler.class
+com\adidas\email\util\DateConverter$Deserialize.class
+com\adidas\email\errorhandling\SubscriptionUniqueErrorException.class
+com\adidas\email\errorhandling\ObjectNotFoundException.class
+com\adidas\email\errorhandling\ErrorDetails.class
+com\adidas\email\SwaggerConfig.class
