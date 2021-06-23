@@ -16,6 +16,7 @@
 - [Deployment on Docker](#deployment)
 - [Docker Config](#docker_config)Z
 - [CI/CD Pipeline Proposal (BONUS 1)](#pipeline)
+- [Improvement Opportunities](#opportunities)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
@@ -233,7 +234,7 @@ The proposed CI/CD pipiline is similar to the steps explained in [deployment](#d
 ### Deployment
 -   Clone project from [repository](https://github.com/LeanBelluscio)
 -   Into the parent folder (adidas-challenge) you can run **mvn clean pakage -P dev**, it will generate the jars for all services. Additionaly you  can run **mvn clean pakage -P dev** individualy for each services
--   Into parent folder run **docker compose build**, it will generates the docker images for each service
+-   Into parent folder run **docker compose build**, it will generate the docker images for each service
 -   Into parent folder run **docker compose up -d**, it will creates the docker containers and deploy the services
 
     ```
@@ -246,6 +247,15 @@ Note: to stop the services run **docker compose down**
     ```
         docker compose down
     ```
+
+## ✨ Improvement Opportunities <a name = "opportunities"></a>
+    As this is a POC due the limited time slot, there are some future improvements such as:
+
+-   Full authentication mechanism, it means varify expired token, refresh token, etc
+-   Create a **common** library for share objects (i.e: Request models that are shared across the serivices)
+-   Use a non in memery database
+-   Configure the project for Kubernates
+
 
 ## ✍️ Authors <a name = "authors"></a>
 

@@ -2,8 +2,13 @@ package com.adidas.subscription.dto;
 
 import java.util.Date;
 
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -13,10 +18,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class SubscriptionRequest extends Request{
  
     @NotEmpty(message = "Email is mandatory")
+    @Email(message = "Email is not a valid address")
     private String email;
 
     private String firstName;
 
+    @Pattern(regexp = "(?:[\\s]|^)(F|M|PNS)(?=[\\s]|$)|^$|^null", message = "Allowed values for gender: M, F, PNS or null")
     private String gender;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "UTC")
@@ -24,6 +31,7 @@ public class SubscriptionRequest extends Request{
     private Date birthDate;
 
     @NotNull(message = "Consent is mandatory")
+    @AssertTrue(message = "Consent should be true")
     private Boolean consent;
 
     @NotNull(message = "Campaign ID is mandatory")
