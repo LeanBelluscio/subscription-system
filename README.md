@@ -242,13 +242,14 @@ The proposed CI/CD pipiline is similar to the steps explained in [deployment](#d
         docker compose build
         docker compose up -d
     ```
-Note: to stop the services run **docker compose down**
+    Note: to stop the services run **docker compose down**
 
     ```
         docker compose down
     ```
 
 ## ✨ Improvement Opportunities <a name = "opportunities"></a>
+
     As this is a POC due the limited time slot, there are some future improvements such as:
 
 -   Full authentication mechanism, it means varify expired token, refresh token, etc
