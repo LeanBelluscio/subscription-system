@@ -14,7 +14,8 @@
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Deployment on Docker](#deployment)
-- [Docker Config](#docker_config)
+- [Docker Config](#docker_config)Z
+- [CI/CD Pipeline Proposal (BONUS 1)](#pipeline)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
@@ -223,6 +224,27 @@ For deploy in Docker I used docker-compose.yml, here we have configured:
             - adidas-private-network
 
     In this example publication-service container will be in the public and the private network
+    ```
+
+## 📝  CI/CD Pipeline Proposal (BONUS 1)<a name = "pipeline"></a>
+
+The proposed CI/CD pipiline is similar to the steps explained in [deployment](#deployment) section.
+
+### Deployment
+-   Clone project from [repository](https://github.com/LeanBelluscio)
+-   Into the parent folder (adidas-challenge) you can run **mvn clean pakage -P dev**, it will generate the jars for all services. Additionaly you  can run **mvn clean pakage -P dev** individualy for each services
+-   Into parent folder run **docker compose build**, it will generates the docker images for each service
+-   Into parent folder run **docker compose up -d**, it will creates the docker containers and deploy the services
+
+    ```
+        mvn clean package -P dev
+        docker compose build
+        docker compose up -d
+    ```
+Note: to stop the services run **docker compose down**
+
+    ```
+        docker compose down
     ```
 
 ## ✍️ Authors <a name = "authors"></a>
