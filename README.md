@@ -256,6 +256,7 @@ The proposed CI/CD pipiline is similar to the steps explained in [deployment](#d
 -   Create a **common** library for share objects (i.e: Request models that are shared across the serivices)
 -   Use a non in memery database
 -   Configure the project for Kubernates
+-   Improve cache mechanism
 
 
 ## ✍️ Authors <a name = "authors"></a>
