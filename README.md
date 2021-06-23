@@ -19,8 +19,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-  Coding Challenge 
-  Java Backend Challenge
+  Coding Java Backend Challenge
 
   Write a Subscription System. The system will be composed of three microservices:
     - ### Public Service: 
@@ -40,10 +39,10 @@
  
 ## 🤝 Assumptions <a name = "assumptions"></a>
 
--   A subscription is detemined by the user and the campaing. A user can subscribe to multiples campaings
+-   A subscription is detemined by the user and the campaign. A user can subscribe to multiples campaigns
 -   A user is identified by the email
 -   Private services (subscription service and email service) are secure and in a private network
--   Public services (Publication service) is unsecure. It is in a public network in order to talk with UI, and in private network in order to talk with Subscription service.
+-   Public services (Publication service) are not secure. It is in a public network in order to communicate with UI, and in private network in order to communicate with Subscription service.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -82,15 +81,12 @@ java -jar .\target\publication-1.0-SNAPSHOT.jar
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
+    In each root service folder (i.e: publication-service/) you should exucute **mvn test** command
 
-### Break down into end to end tests
+    ```
+        mvn test
 
-Explain what these tests test and why
-
-```
-Give an example
-```
+     ```
 
 ## 🎈 Usage <a name="usage"></a>
 
@@ -140,7 +136,7 @@ All services uses Swagger for Api Documentation. You can access to each Api defi
     ```
 - ### Build Docker images
 
-    Into the parent folder (the folder where the three services folders are contained) run **docker compose build** it will creates one decker image for each service
+    Into the parent folder (the folder where the three services folders are contained) run **docker compose build** it will creates one docker image for each service
 
     ```
      ..adidas-challenge> docker compose build
@@ -152,7 +148,7 @@ All services uses Swagger for Api Documentation. You can access to each Api defi
     <img width="75%" src="images/dockerimg.png" alt="cli output"/>
     </p>
 
-    Now we have the images for each service. The next step is deploy those images in the container
+    Now we have the images for each service. The next step is to deploy those images in the container
     Into the parent folder Run **docker compose up -d** it will start with the deployment according to the config in docker-compose.yml file and the Dockerfiles.
 
     ```
@@ -200,7 +196,7 @@ For deploy in Docker I used docker-compose.yml, here we have configured:
 -   ### Mapping ports: 
     Currently each container is mapped with a local port. Ideally just Public Service container should be exposed, and the private services will be in a private network.
 -   ### Networks:
-    For the communication between services a Private network will be created, also I configured a public network in order to allow the communication between public services and UI frontend. For develpment and testing purpose all services has a local port mapping. It can be disabled removing **port** attributes from docker-compose.yml
+    For the communication between services a Private network will be created, also I configured a public network in order to allow the communication between public services and UI frontend. For development and testing purpose all services has a local port mapping. It can be disabled removing **port** attributes from docker-compose.yml
 
     Network definition
 
