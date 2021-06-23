@@ -1,3 +1,7 @@
 email-service/target/
 publication-service/target/
 subscription-service/target/
+.vscode
+.project
+.settings
+logs
