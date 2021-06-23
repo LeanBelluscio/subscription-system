@@ -25,6 +25,11 @@ services:
       - "8081:8081"
     networks: 
       - adidas-private-network
+    volumes:
+      - myapp:/db
+volumes:
+  myapp:
+    external: false
 networks: 
   adidas-public-network:
       name: adidas-public-network

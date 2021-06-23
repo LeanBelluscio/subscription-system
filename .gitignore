@@ -4,4 +4,7 @@ subscription-service/target/
 .vscode
 .project
 .settings
-logs
+logs/
+email-service/logs/
+publication-service/logs/
+subscription-service/logs/

@@ -8,7 +8,7 @@ create table IF NOT EXISTS user
    primary key(id)
 );
 
-create table IF NOT EXISTS campaign
+create table IF NOT EXISTS c
 (
    id IDENTITY not null,
    campaign_name VARCHAR(120) not null,
@@ -28,3 +28,6 @@ create table IF NOT EXISTS subscription
    foreign key (user_id ) references user(id),
    foreign key (campaign_id ) references campaign(id)
 );
+delete from campaign;
+insert into campaign(id, campaign_name, description, start_date, end_date) values(1,'Summer Offers','Enjoy the Summer with Adidas','2021-06-21','2021-09-20');
+insert into campaign(id, campaign_name, description, start_date, end_date) values(2,'Winter Offers','Enjoy the Winter with Adidas','2021-12-21','2021-03-20');

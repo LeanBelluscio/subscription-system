@@ -19,7 +19,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-  Codging Challenge 
+  Coding Challenge 
   Java Backend Challenge
 
   Write a Subscription System. The system will be composed of three microservices:
@@ -40,14 +40,14 @@
  
 ## 🤝 Assumptions <a name = "assumptions"></a>
 
--   A subscription is detemined by the user and the campaing. An user can subscribe to multiples campaings
--   An user is identified by the email
+-   A subscription is detemined by the user and the campaing. A user can subscribe to multiples campaings
+-   A user is identified by the email
 -   Private services (subscription service and email service) are secure and in a private network
 -   Public services (Publication service) is unsecure. It is in a public network in order to talk with UI, and in private network in order to talk with Subscription service.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a docker container .
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See  [deployment](#deployment) for notes on how to deploy the project on a docker container ..
 
 ### Prerequisites
 
@@ -199,7 +199,7 @@ For deploy in Docker I used docker-compose.yml, here we have configured:
 
 -   ### Mapping ports: 
     Currently each container is mapped with a local port. Ideally just Public Service container should be exposed, and the private services will be in a private network.
--   ### Networws:
+-   ### Networks:
     For the communication between services a Private network will be created, also I configured a public network in order to allow the communication between public services and UI frontend. For develpment and testing purpose all services has a local port mapping. It can be disabled removing **port** attributes from docker-compose.yml
 
     Network definition
