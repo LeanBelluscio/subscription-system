@@ -6,6 +6,9 @@ import com.adidas.subscription.domain.Subscription;
 import com.adidas.subscription.domain.User;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * @author lbelluscio
+ */
 public class SubscriptionResponse {
     
     private Long subscriptionId;

@@ -1,10 +1,6 @@
-/**
- * 
- */
 package com.adidas.subscription.errorhandling;
 
 import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
@@ -38,6 +34,14 @@ public class ErrorDetails {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public String getDetails() {
+		return details;
+	}
+
+	public void setDetails(String details) {
+		this.details = details;
 	}
 	
 }

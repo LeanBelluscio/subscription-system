@@ -4,19 +4,18 @@ package com.adidas.email.util;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
+
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
 
 import org.springframework.boot.jackson.JsonComponent;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonSerializer;
-import com.fasterxml.jackson.databind.SerializerProvider;
-
+/**
+ * @author lbelluscio
+ * Custom Date converter, it handle the Dates from the json reques/response and parse or convert to text the 
+ * dates according to the configure pattern yyyy-MM-dd
+ */
 @JsonComponent
 public class DateConverter {
 

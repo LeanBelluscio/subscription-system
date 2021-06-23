@@ -13,6 +13,9 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * @author lbelluscio
+ */
 @Entity(name="subscription")
 @Table(name="subscription")
 public class Subscription {

@@ -7,12 +7,14 @@ import com.adidas.subscription.domain.Campaign;
 import com.adidas.subscription.errorhandling.ObjectNotFoundException;
 import com.adidas.subscription.persistence.CampaignRespository;
 import com.adidas.subscription.service.CampaignService;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author lbelluscio
+ */
 @Component
 public class CampaignServiceImpl implements CampaignService{
 

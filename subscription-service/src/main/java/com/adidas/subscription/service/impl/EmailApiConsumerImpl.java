@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author lbelluscio
+ */
 @Component
 public class EmailApiConsumerImpl extends ResApiComsumer implements EmailApiConsumer{
 
@@ -26,10 +29,12 @@ public class EmailApiConsumerImpl extends ResApiComsumer implements EmailApiCons
     }
 
     @Override
-    public String sendSubscriptionEmail(SubscriptionRequest request) throws EmailServiceErrorException {
+    public String sendSubscriptionEmail(SubscriptionRequest request, String accessToken) throws EmailServiceErrorException {
         logger.info("Calling email service");
         try{
-            return post(request, subscriptionEndpoint).getBody();
+            String emailServiceResponse =  post(request, subscriptionEndpoint, accessToken).getBody();
+            logger.info("Email Sent:" + emailServiceResponse);
+            return emailServiceResponse;
         }catch(Exception e){
             throw new EmailServiceErrorException("Error Calling Email Service Api" + System.lineSeparator() + e.getMessage());
         }

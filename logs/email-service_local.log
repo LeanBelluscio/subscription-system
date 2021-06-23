@@ -1,0 +1,37 @@
+2021-06-23 09:11:14,635 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.10 on DESKTOP-BF1CHRE with PID 9204 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge)
+2021-06-23 09:11:14,644 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:11:14,645 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:11:16,920 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8083 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8083 or configure this application to listen on another port.
+
+2021-06-23 09:15:12,910 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.10 on DESKTOP-BF1CHRE with PID 18036 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge)
+2021-06-23 09:15:12,914 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:15:12,915 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:15:15,368 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 2.92 seconds (JVM running for 3.434)
+2021-06-23 09:27:40,925 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.10 on DESKTOP-BF1CHRE with PID 24872 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge)
+2021-06-23 09:27:40,929 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:27:40,929 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:27:43,583 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 3.178 seconds (JVM running for 4.109)
+2021-06-23 09:29:03,441 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.10 on DESKTOP-BF1CHRE with PID 21472 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge)
+2021-06-23 09:29:03,445 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:29:03,445 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:29:06,088 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 3.087 seconds (JVM running for 3.62)
+2021-06-23 09:33:06,563 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.10 on DESKTOP-BF1CHRE with PID 24032 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge)
+2021-06-23 09:33:06,567 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:33:06,567 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:33:09,973 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 3.943 seconds (JVM running for 4.762)
+2021-06-23 09:35:36,917 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.10 on DESKTOP-BF1CHRE with PID 14520 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge)
+2021-06-23 09:35:36,923 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:35:36,923 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:35:39,609 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 3.115 seconds (JVM running for 3.659)

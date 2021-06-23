@@ -8,6 +8,9 @@ import com.adidas.subscription.dto.SubscriptionRequest;
 import com.adidas.subscription.errorhandling.ObjectNotFoundException;
 import com.adidas.subscription.errorhandling.SubscriptionUniqueErrorException;
 
+/**
+ * @author lbelluscio
+ */
 public interface SubscriptionService {
     
     Optional<Subscription> findById(Long id);

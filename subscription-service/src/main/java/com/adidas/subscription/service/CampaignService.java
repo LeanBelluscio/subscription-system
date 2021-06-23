@@ -5,6 +5,9 @@ import java.util.Optional;
 
 import com.adidas.subscription.domain.Campaign;
 
+/**
+ * @author lbelluscio
+ */
 public interface CampaignService {
     
     Optional<Campaign> findById(Long id);

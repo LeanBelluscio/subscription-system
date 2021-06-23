@@ -23,6 +23,9 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author lbelluscio
+ */
 @Component
 public class SubscriptionServiceImpl implements SubscriptionService{
 
@@ -93,7 +96,6 @@ public class SubscriptionServiceImpl implements SubscriptionService{
         return this.subscriptionRepository.save(subscription);
     }
 
-
     
     @Override 
     public void remove(Long id) throws ObjectNotFoundException{
@@ -108,6 +110,14 @@ public class SubscriptionServiceImpl implements SubscriptionService{
         
     }
 
+    /**
+     * As a bussiness rule, I considered that a same user can subscribe to multiples Campaigns
+     * This method validates that the user is not subscribed to the Campaign
+     * @param user
+     * @param campaign
+     * @return
+     * @throws SubscriptionUniqueErrorException
+     */
     private Boolean varifyUniqueSubscription(User user, Campaign campaign) throws SubscriptionUniqueErrorException {
         logger.debug("Verifying Subscription.");
         Optional<Subscription> subscription = this.subscriptionRepository.findByUserAndCampaign(user, campaign);

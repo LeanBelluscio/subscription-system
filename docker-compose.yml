@@ -1,0 +1,33 @@
+version: "3"
+services:
+  publication-service: 
+    container_name: publication-service
+    build: ./publication-service/
+    image: adidas-challenge/publication-service
+    ports:
+      - "8082:8082"
+    networks: 
+      - adidas-public-network
+      - adidas-private-network
+  email-service:
+    container_name: email-service
+    build: ./email-service/
+    image: adidas-challenge/email-service
+    ports:
+      - "8083:8083"
+    networks: 
+      - adidas-private-network
+  subscription-service:
+    container_name: subscription-service
+    build: ./subscription-service/
+    image: adidas-challenge/subscription-service
+    ports:
+      - "8081:8081"
+    networks: 
+      - adidas-private-network
+networks: 
+  adidas-public-network:
+      name: adidas-public-network
+  adidas-private-network:
+      name: adidas-private-network
+  

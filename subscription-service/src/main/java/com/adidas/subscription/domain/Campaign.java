@@ -11,6 +11,9 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * @author lbelluscio
+ */
 @Entity(name="campaign")
 @Table(name="campaign")
 public class Campaign {

@@ -2,6 +2,9 @@ package com.adidas.subscription.dto;
 
 import com.adidas.subscription.domain.Campaign;
 
+/**
+ * @author lbelluscio
+ */
 public class CampaignData {
     
     private Long id;

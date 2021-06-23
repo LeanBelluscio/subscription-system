@@ -1,0 +1,16 @@
+2021-06-23 08:50:59,909 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.11 on DESKTOP-BF1CHRE with PID 24892 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service)
+2021-06-23 08:50:59,912 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 08:50:59,912 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 08:51:01,986 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 2.451 seconds (JVM running for 2.944)
+2021-06-23 09:16:13,628 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication using Java 11.0.11 on DESKTOP-BF1CHRE with PID 32216 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\classes started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service)
+2021-06-23 09:16:13,633 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:16:13,634 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:16:15,837 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 2.577 seconds (JVM running for 3.06)
+2021-06-23 09:17:41,245 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication v1.0-SNAPSHOT using Java 11.0.11 on DESKTOP-BF1CHRE with PID 19836 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\email-1.0-SNAPSHOT.jar started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service)
+2021-06-23 09:17:41,248 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:17:41,249 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:17:45,163 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 4.533 seconds (JVM running for 5.23)
+2021-06-23 09:18:42,823 INFO com.adidas.email.EmailApplication [main] Starting EmailApplication v1.0-SNAPSHOT using Java 11.0.11 on DESKTOP-BF1CHRE with PID 10324 (C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service\target\email-1.0-SNAPSHOT.jar started by Leandro in C:\_code\Sandbox\adidas-challenge\adidas-challenge\email-service)
+2021-06-23 09:18:42,827 DEBUG com.adidas.email.EmailApplication [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-23 09:18:42,827 INFO com.adidas.email.EmailApplication [main] The following profiles are active: local
+2021-06-23 09:18:46,815 INFO com.adidas.email.EmailApplication [main] Started EmailApplication in 4.656 seconds (JVM running for 5.344)

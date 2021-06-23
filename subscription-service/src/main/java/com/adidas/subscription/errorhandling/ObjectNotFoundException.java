@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.adidas.subscription.errorhandling;
 
 import org.springframework.http.HttpStatus;

@@ -8,11 +8,12 @@ import com.adidas.subscription.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author lbelluscio
+ */
 @Component
 public class UserServiceImpl implements UserService{
 
@@ -23,14 +24,14 @@ public class UserServiceImpl implements UserService{
     private UserRepository userRepository;
 
     @Override
-    @Cacheable(value = "users")
+    @Cacheable(value = "usersCache")
     public Optional<User> findByEmail(String email) {
         return this.userRepository.findByEmail(email);
     }
 
     @Override
     public User saveUser(User user) {
-        cacheManager.getCache("users").invalidate();
+        cacheManager.getCache("usersCache").invalidate();
         return this.userRepository.save(user);
     }
     

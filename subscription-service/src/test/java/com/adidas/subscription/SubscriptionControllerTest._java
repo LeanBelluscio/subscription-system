@@ -1,0 +1,81 @@
+/**
+ * 
+ */
+package com.adidas.subscription;
+
+import static org.mockito.Mockito.when;
+
+import com.adidas.subscription.controller.SubscriptionController;
+import com.adidas.subscription.domain.Subscription;
+import com.adidas.subscription.dto.SubscriptionRequest;
+import com.adidas.subscription.service.SubscriptionService;
+import com.adidas.subscription.util.JsonUtil;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.GsonBuilderUtils;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+
+/**
+ * @author leandrobelluscio
+ *
+ */
+@WebMvcTest(SubscriptionController.class)
+public class SubscriptionControllerTest  {
+
+	@Autowired
+	private WebApplicationContext context;
+   
+	@MockBean
+	private SubscriptionService service;
+   
+	protected MockMvc mockMvc;
+   
+	@BeforeEach
+	public void setup() {
+	  this.mockMvc = MockMvcBuilders
+		.webAppContextSetup(this.context)
+		.apply(springSecurity())
+		.build();
+	}
+
+	
+	
+	@Test
+	public void concurrentBooking() throws Exception{
+			SubscriptionRequest request = new SubscriptionRequest();
+			request.setCampaignId(1L);
+			request.setConsent(true);
+			request.setEmail("example@adidas.com");
+			request.setFirstName("MockName");
+			request.setGender("M");
+
+			// Subscription subscription = new Subscription(1L, user, campaign, subscriptionDate)
+			// when(service.createNewSubscription(request)).thenReturn()		
+			// 			System.out.println("Bokking id:" );
+			this.mockMvc.perform(MockMvcRequestBuilders
+				.post("/subscription/api")
+				.content(JsonUtil.stringify(request))
+				.contentType(MediaType.APPLICATION_JSON)
+      			.accept(MediaType.APPLICATION_JSON)
+     			.andExpect(status().isCreated());
+	}
+}
+	}
+}

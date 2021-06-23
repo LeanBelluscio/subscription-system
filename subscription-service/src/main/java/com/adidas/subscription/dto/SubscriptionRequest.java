@@ -3,11 +3,16 @@ package com.adidas.subscription.dto;
 import java.util.Date;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * @author lbelluscio
+ */
 public class SubscriptionRequest extends Request{
  
+    @NotEmpty(message = "Email is mandatory")
     private String email;
 
     private String firstName;
@@ -15,13 +20,15 @@ public class SubscriptionRequest extends Request{
     private String gender;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "UTC")
+    @NotNull(message = "Birth Date is mandatory")
     private Date birthDate;
 
+    @NotNull(message = "Consent is mandatory")
     private Boolean consent;
 
+    @NotNull(message = "Campaign ID is mandatory")
     private Long campaignId;
 
-    @NotEmpty(message = "Email is mandatory")
     public String getEmail() {
         return email;
     }

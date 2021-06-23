@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author lbelluscio
+ */
 @Component
 public class SubscriptionServiceConsumerImpl extends ResApiComsumer implements SubscriptionServiceConsumer {
 
@@ -21,6 +24,7 @@ public class SubscriptionServiceConsumerImpl extends ResApiComsumer implements S
         this.basePath = basePath;
     }
 
+  
     @Override
     public String subscribe(SubscriptionRequest request) {
         try{

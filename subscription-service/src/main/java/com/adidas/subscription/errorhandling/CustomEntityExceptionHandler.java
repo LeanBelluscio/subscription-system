@@ -46,7 +46,7 @@ public class CustomEntityExceptionHandler extends ResponseEntityExceptionHandler
                 .collect(Collectors.toList());
 
         body.put("errors", errors);
-		logger.error("Validation Error", ex);															
+		logger.error("Validation Error:", ex);															
         return new ResponseEntity<>(body, headers, status);
 
     }
@@ -55,7 +55,7 @@ public class CustomEntityExceptionHandler extends ResponseEntityExceptionHandler
 	  public final ResponseEntity<ErrorDetails> handleObjectNotFoundException(ObjectNotFoundException ex, WebRequest request) {
 	    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
 	    	request.getDescription(false));
-		logger.error("Object Not Found", ex);	
+		logger.error("Object Not Found:", ex);	
 	    return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
 	  }
 	
@@ -65,7 +65,7 @@ public class CustomEntityExceptionHandler extends ResponseEntityExceptionHandler
 	  public final ResponseEntity<ErrorDetails> handleSubscriptionUniqueException(SubscriptionUniqueErrorException ex, WebRequest request) {
 	    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
 	        request.getDescription(false));
-		logger.error("Subscription Non Unique", ex);	
+		logger.error("Subscription Non Unique:", ex);	
 	    return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
 	  }
 
@@ -73,7 +73,7 @@ public class CustomEntityExceptionHandler extends ResponseEntityExceptionHandler
 	  public final ResponseEntity<ErrorDetails> handleEmailServiceException(EmailServiceErrorException ex, WebRequest request) {
 	    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
 	        request.getDescription(false));
-		logger.error("Email Service Api Error", ex);	
+		logger.error("Email Service Api Error:", ex);	
 	    return new ResponseEntity<>(errorDetails, HttpStatus.SERVICE_UNAVAILABLE);
 	  }
 	
@@ -81,7 +81,7 @@ public class CustomEntityExceptionHandler extends ResponseEntityExceptionHandler
 	  public final ResponseEntity<ErrorDetails> handleGenericException(Exception ex, WebRequest request) {
 	    ErrorDetails errorDetails = new ErrorDetails(new Date(), "Internarl Server Error: "+ex.getMessage(),
 	    	request.getDescription(false));
-		logger.error("An Error Occurs", ex);	
+		logger.error("Internal Server Error:", ex);	
 	    return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
 	  }
 }

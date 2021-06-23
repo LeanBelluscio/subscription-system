@@ -3,8 +3,6 @@
  */
 package com.adidas.publication.errorhandling;
 
-import java.io.IOException;
-import java.text.ParseException;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -54,15 +52,6 @@ public class CustomEntityExceptionHandler extends ResponseEntityExceptionHandler
 
     }
 	
-	 @ExceptionHandler(ObjectNotFoundException.class)
-	  public final ResponseEntity<ErrorDetails> handleObjectNotFoundException(ObjectNotFoundException ex, WebRequest request) {
-	    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
-	        request.getDescription(false));
-		logger.error("Object Not Found", ex);
-	    return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
-	  }
-	
-
 	
 	@ExceptionHandler(SubscriptionServiceErrorException.class)
 	  public final ResponseEntity<ErrorDetails> handleSubscriptionServiceException(SubscriptionServiceErrorException ex, WebRequest request) {
@@ -72,13 +61,6 @@ public class CustomEntityExceptionHandler extends ResponseEntityExceptionHandler
 	    return new ResponseEntity<>(errorDetails, HttpStatus.SERVICE_UNAVAILABLE);
 	  }
 	
-	  @ExceptionHandler(IOException.class)
-	  public final ResponseEntity<ErrorDetails> handleParseException(IOException ex, WebRequest request) {
-	    ErrorDetails errorDetails = new ErrorDetails(new Date(), "Internarl Server Error: "+ex.getMessage(),
-	        request.getDescription(false));
-		logger.error("Parse Error", ex);
-	    return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
-	  }
 
 	@ExceptionHandler(Exception.class)
 	  public final ResponseEntity<ErrorDetails> handleGenericException(Exception ex, WebRequest request) {

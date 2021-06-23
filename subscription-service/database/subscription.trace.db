@@ -1,3 +1,0 @@
-2021-06-21 02:16:57 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLDataException: Value too long for column "GENDER VARCHAR(3)": "'string' (6)"; SQL statement:
-insert into user (id, birth_date, email, first_name, gender) values (null, ?, ?, ?, ?) [22001-200]
